@@ -17,7 +17,7 @@ Follow the instruction written in [the offical github website of Llama Models](h
 >
 > 7. Pass the URL provided when prompted to start the download.
 
-After installing the model, one might want to transform your parameters into the format that is suitable for hf (huggingface).
+After installing the model, one might want to transform your parameters into the format that is suitable for hf (huggingface).\\
 🤗Transformers actually provide a file called [`convert_llama_weights_to_hf.py`](https://github.com/huggingface/transformers/blob/main/src/transformers/models/llama/convert_llama_weights_to_hf.py) that can be used to do so.
 
 For example, say we've install the `Llama3.1-8B-Instruct`, then we can transform it into hf format like this:
