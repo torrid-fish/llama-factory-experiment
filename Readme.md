@@ -49,3 +49,20 @@ python -m venv eval
 cd lm-evaluation-harness
 pip install -r requirements.txt
 ```
+
+## Usage
+I use the server [hpcfund powered by AMD](https://www.amd.com/en/corporate/hpc-fund.html) to conduct all the experiments.
+
+This server is maintained under [slurm](https://slurm.schedmd.com/documentation.html), so all the scripts are written to cater their requirement.
+
+> [!WARNING]
+> The path to site-packages in the line `export PYTHONPATH="$WORK/eval/env/lib/python3.9/site-packages:$PYTHONPATH"` which is written inside `eval.sh` and `train.sh` might need to be changed.
+
+### Train
+```
+sbatch run_train.sh
+```
+### Evaluate
+```
+sbatch run_eval.sh
+```
