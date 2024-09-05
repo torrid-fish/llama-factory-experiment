@@ -10,6 +10,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch \
     LLaMA-Factory/src/train.py \
     --stage sft \
     --do_train True \
+    --use_dora True \
     --model_name_or_path $WORK/llama-factory-experiment/Llama3.1-8B-Instruct-hf \
     --preprocessing_num_workers 16 \
     --finetuning_type lora \
@@ -19,7 +20,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch \
     --dataset medmcqa \
     --cutoff_len 1024 \
     --learning_rate 5e-05 \
-    --num_train_epochs 3.0 \
+    --num_train_epochs 1.5 \
     --max_samples 100000 \
     --per_device_train_batch_size 2 \
     --gradient_accumulation_steps 8 \
@@ -31,7 +32,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch \
     --optim adamw_torch \
     --packing False \
     --report_to none \
-    --output_dir saves/LLaMA3.1-8B-Chat/lora/train_2024-09-05-01-25-35 \
+    --output_dir saves/LLaMA3.1-8B-Chat/dora \
     --bf16 True \
     --plot_loss True \
     --ddp_timeout 180000000 \
