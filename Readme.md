@@ -1,6 +1,6 @@
 # Llama-Factory Experiment
 
-## Install model (Llama3.1)
+## Install model
 Follow the instruction written in [the offical github website of Llama Models](https://github.com/meta-llama/llama-models?tab=readme-ov-file#download):
 
 > 1. Visit the [Meta Llama website](https://llama.meta.com/llama-downloads/).
@@ -31,8 +31,8 @@ python {path_to_transformers_package}/models/llama/convert_llama_weights_to_hf.p
 ```
 
 
-## Environment setup.
-Here, I use python built-in virtual environment to seperate different environments.
+## Setup environment
+Here, I use python built-in virtual environments `venv` to seperate different environments.
 
 ### Train (LLaMA-Factory)
 ```
