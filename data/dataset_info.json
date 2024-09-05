@@ -1,0 +1,6 @@
+{
+    "medmcqa": {
+        "file_name": "medmcqa_alpaca_format.jsonl",
+        "formatting": "alpaca"
+    }
+}
