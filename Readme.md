@@ -1,5 +1,9 @@
 # Llama-Factory Experiment
 
+## Experiment result
+
+![](./imgs/lora_result.png)
+
 ## Install model
 Follow the instruction written in [the offical github website of Llama Models](https://github.com/meta-llama/llama-models?tab=readme-ov-file#download):
 
