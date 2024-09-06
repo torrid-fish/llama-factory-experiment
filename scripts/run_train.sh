@@ -3,7 +3,7 @@
 #SBATCH --job-name=train_medmcqa
 #SBATCH --verbose
 #SBATCH -D .
-#SBATCH --partition=mi2104x
+#SBATCH --partition=mi2508x
 #SBATCH --output=log/O-%x.%j
 #SBATCH --error=log/E-%x.%j
 #SBATCH --nodes=1

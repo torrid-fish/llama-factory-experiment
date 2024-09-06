@@ -5,7 +5,7 @@ module load pytorch
 source train/bin/activate
 export PYTHONPATH="$WORK/train/env/lib/python3.9/site-packages:$PYTHONPATH"
 
-CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch \
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 accelerate launch \
     --config_file accelerate_config.yaml \
     LLaMA-Factory/src/train.py \
     --stage sft \
@@ -22,7 +22,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 accelerate launch \
     --learning_rate 5e-05 \
     --num_train_epochs 1.5 \
     --max_samples 100000 \
-    --per_device_train_batch_size 2 \
+    --per_device_train_batch_size 4 \
     --gradient_accumulation_steps 8 \
     --lr_scheduler_type cosine \
     --max_grad_norm 1.0 \

@@ -2,7 +2,11 @@
 
 ## Experiment result
 
-![](./imgs/lora_result.png)
+We can see that round 1 epoch, Lora reaches its highest performance. It outperforms baseline around 3%.
+
+![](./imgs/acc_lora_vs_dora.png)
+
+![](./imgs/loss_lora_vs_dora.png)
 
 ## Install model
 Follow the instruction written in [the offical github website of Llama Models](https://github.com/meta-llama/llama-models?tab=readme-ov-file#download):
@@ -34,7 +38,6 @@ python {path_to_transformers_package}/models/llama/convert_llama_weights_to_hf.p
     --llama_version 3
 ```
 
-
 ## Setup environment
 Here, I use python built-in virtual environments `venv` to seperate different environments.
 
@@ -54,6 +57,7 @@ cd lm-evaluation-harness
 pip install -r requirements.txt
 ```
 
+
 ## Usage
 I use the server [hpcfund powered by AMD](https://www.amd.com/en/corporate/hpc-fund.html) to conduct all the experiments.
 
@@ -70,3 +74,11 @@ sbatch run_train.sh
 ```
 sbatch run_eval.sh
 ```
+### Chat
+
+Since the HPC server is suitable for submitting tasks rather then this kind of interactive chatting, 
+it is not suggest to chat with model on hpc server.
+
+Instead, you can use your own device to do so. The minimumm requirement of RAM for Llama3.1-8B with 1GPU is 20GBs.
+
+Here, I still provide the script that I used to chat with model in `scripts/chat.sh`.
