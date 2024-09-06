@@ -1,12 +1,15 @@
 # Llama-Factory Experiment
 
-## Experiment result
+## Experiment result on medmcqa
 
 We can see that round 1 epoch, Lora reaches its highest performance. It outperforms baseline around 3%.
 
 ![](./imgs/acc_lora_vs_dora.png)
 
 ![](./imgs/loss_lora_vs_dora.png)
+
+## Dataset
+This time I choose [medmcqa](https://medmcqa.github.io/), which is a multi-choice task on medical knowledge. 
 
 ## Install model
 Follow the instruction written in [the offical github website of Llama Models](https://github.com/meta-llama/llama-models?tab=readme-ov-file#download):
